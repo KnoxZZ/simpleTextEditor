@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace simpleTextEditor2._0
         public simpleTextEditor()
         {
             InitializeComponent();
+            
         }
 
         private void simpleTextEditor_Load(object sender, EventArgs e)
@@ -22,14 +24,16 @@ namespace simpleTextEditor2._0
 
         }
 
-        private void previewButton_Click(object sender, EventArgs e)
+        private void mainTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void saveButton_Click(object sender, EventArgs e)
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            ofd.ShowDialog();
         }
     }
 }

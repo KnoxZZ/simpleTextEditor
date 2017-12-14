@@ -8,3 +8,13 @@ C:\Users\Kalle\source\repos\simpleTextEditor2.0\simpleTextEditor2.0\obj\Debug\si
 C:\Users\Kalle\source\repos\simpleTextEditor2.0\simpleTextEditor2.0\obj\Debug\simpleTextEditor2.0.csproj.CoreCompileInputs.cache
 C:\Users\Kalle\source\repos\simpleTextEditor2.0\simpleTextEditor2.0\obj\Debug\simpleTextEditor2.0.exe
 C:\Users\Kalle\source\repos\simpleTextEditor2.0\simpleTextEditor2.0\obj\Debug\simpleTextEditor2.0.pdb
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor2.0\simpleTextEditor2.0\bin\Debug\simpleTextEditor2.0.exe.config
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor2.0\simpleTextEditor2.0\bin\Debug\simpleTextEditor2.0.exe
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor2.0\simpleTextEditor2.0\bin\Debug\simpleTextEditor2.0.pdb
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor2.0\simpleTextEditor2.0\obj\Debug\simpleTextEditor2.0.csprojResolveAssemblyReference.cache
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor2.0\simpleTextEditor2.0\obj\Debug\simpleTextEditor2._0.simpleTextEditor.resources
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor2.0\simpleTextEditor2.0\obj\Debug\simpleTextEditor2._0.Properties.Resources.resources
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor2.0\simpleTextEditor2.0\obj\Debug\simpleTextEditor2.0.csproj.GenerateResource.Cache
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor2.0\simpleTextEditor2.0\obj\Debug\simpleTextEditor2.0.csproj.CoreCompileInputs.cache
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor2.0\simpleTextEditor2.0\obj\Debug\simpleTextEditor2.0.exe
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor2.0\simpleTextEditor2.0\obj\Debug\simpleTextEditor2.0.pdb
