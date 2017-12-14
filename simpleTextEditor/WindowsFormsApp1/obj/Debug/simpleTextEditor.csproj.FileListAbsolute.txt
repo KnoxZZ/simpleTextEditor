@@ -1,0 +1,10 @@
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor\WindowsFormsApp1\obj\Debug\simpleTextEditor.csprojResolveAssemblyReference.cache
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.mainEditor.resources
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor\WindowsFormsApp1\obj\Debug\simpleTextEditor.csproj.GenerateResource.Cache
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor\WindowsFormsApp1\obj\Debug\simpleTextEditor.csproj.CoreCompileInputs.cache
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
