@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void mainTextBox_TextChanged(object sender, EventArgs e)
