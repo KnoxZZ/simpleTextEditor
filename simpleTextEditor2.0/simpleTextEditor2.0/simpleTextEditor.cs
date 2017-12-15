@@ -106,6 +106,41 @@ namespace simpleTextEditor2._0
             save();
         }
 
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainTextBox.SelectedText = "";
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainTextBox.Paste();
+        }
+
+        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (mainTextBox.SelectedText != "")
+            {
+                mainTextBox.Cut();
+            }
+        }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (mainTextBox.SelectedText != "")
+            {
+                mainTextBox.Copy();
+            }
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (mainTextBox.CanUndo == true)
+            {
+                mainTextBox.Undo();
+                mainTextBox.ClearUndo();
+            }
+        }
+
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == (Keys.Control | Keys.S))
@@ -118,7 +153,27 @@ namespace simpleTextEditor2._0
                 open();
                 return true;
             }
+            else if (keyData == (Keys.Control | Keys.Z))
+            {
+                if (mainTextBox.CanUndo == true)
+                {
+                    mainTextBox.Undo();
+                    mainTextBox.ClearUndo();
+                }
+                return true;
+            }
             return base.ProcessCmdKey(ref msg, keyData);
         }
+        
+        private void redoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*
+            if(mainTextBox.CanRedo == true)
+            {
+                mainTextBox.Redo();
+            }
+            */
+        }
+
     }
 }
