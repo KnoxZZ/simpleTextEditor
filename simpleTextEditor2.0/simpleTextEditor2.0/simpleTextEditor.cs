@@ -19,17 +19,25 @@ namespace simpleTextEditor2._0
             {
                 SaveFileDialog sfd = new SaveFileDialog();
                 Path = sfd.FileName;
-                File.WriteAllText(Path, mainTextBox.Text, Encoding.UTF8);
+                File.WriteAllText(Path, mainTextBox.Text, Encoding.Default);
             }
             else
             {
-                File.WriteAllText(Path, mainTextBox.Text);
+                File.WriteAllText(Path, mainTextBox.Text, Encoding.Default);
             }
         }
 
         private Boolean exit()
         {
-            if (!(mainTextBox.Text == File.ReadAllText(Path)))
+
+            if (Path != null && !(mainTextBox.Text == File.ReadAllText(Path)))
+            {
+                sure op = new sure();
+                op.Show();
+
+                return false;
+            }
+            else if (Path == null)
             {
                 sure op = new sure();
                 op.Show();
@@ -58,7 +66,7 @@ namespace simpleTextEditor2._0
             ofd.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             ofd.ShowDialog();
             Path = ofd.FileName;
-            mainTextBox.Text = File.ReadAllText(Path, Encoding.UTF8);
+            mainTextBox.Text = File.ReadAllText(Path, Encoding.Default);
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
