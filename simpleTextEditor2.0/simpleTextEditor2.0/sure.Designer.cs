@@ -28,29 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.exitButton = new System.Windows.Forms.Button();
-            this.saveButton = new System.Windows.Forms.Button();
+            this.newButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // exitButton
+            // newButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(15, 73);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(105, 31);
-            this.exitButton.TabIndex = 0;
-            this.exitButton.Text = "Exit";
-            this.exitButton.UseVisualStyleBackColor = true;
+            this.newButton.Location = new System.Drawing.Point(15, 73);
+            this.newButton.Name = "newButton";
+            this.newButton.Size = new System.Drawing.Size(105, 31);
+            this.newButton.TabIndex = 0;
+            this.newButton.Text = "New";
+            this.newButton.UseVisualStyleBackColor = true;
+            this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
-            // saveButton
+            // cancelButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(120, 73);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(105, 31);
-            this.saveButton.TabIndex = 1;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.button2_Click);
+            this.cancelButton.Location = new System.Drawing.Point(120, 73);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(105, 31);
+            this.cancelButton.TabIndex = 1;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // textBox1
             // 
@@ -60,7 +61,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(207, 55);
             this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Are you sure you want to leave without saving\r\n";
+            this.textBox1.Text = "Are you sure you want to start new without saving\r\n";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // sure
@@ -69,8 +70,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(240, 120);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.newButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "sure";
             this.Text = "sure";
@@ -81,8 +82,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button newButton;
+        private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.TextBox textBox1;
     }
 }

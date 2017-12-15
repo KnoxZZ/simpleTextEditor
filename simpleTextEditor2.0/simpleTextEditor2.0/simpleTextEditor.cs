@@ -8,6 +8,7 @@ namespace simpleTextEditor2._0
     public partial class simpleTextEditor : Form
     {
         private string Path = null;
+        sure op = new sure();
         public simpleTextEditor()
         {
             InitializeComponent();
@@ -18,8 +19,13 @@ namespace simpleTextEditor2._0
             if(Path == null)
             {
                 SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                DialogResult dr = sfd.ShowDialog();
                 Path = sfd.FileName;
-                File.WriteAllText(Path, mainTextBox.Text, Encoding.Default);
+                if (dr == DialogResult.OK)
+                {
+                    File.WriteAllText(Path, mainTextBox.Text, Encoding.Default);
+                }
             }
             else
             {
@@ -32,14 +38,12 @@ namespace simpleTextEditor2._0
 
             if (Path != null && !(mainTextBox.Text == File.ReadAllText(Path)))
             {
-                sure op = new sure();
                 op.Show();
 
                 return false;
             }
             else if (Path == null)
             {
-                sure op = new sure();
                 op.Show();
 
                 return false;
@@ -64,9 +68,12 @@ namespace simpleTextEditor2._0
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-            ofd.ShowDialog();
+            DialogResult dr = ofd.ShowDialog();
             Path = ofd.FileName;
-            mainTextBox.Text = File.ReadAllText(Path, Encoding.Default);
+            if (dr == DialogResult.OK)
+            {
+                mainTextBox.Text = File.ReadAllText(Path, Encoding.Default);
+            }
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
