@@ -7,6 +7,7 @@ namespace simpleTextEditor2._0
 {
     public partial class simpleTextEditor : Form
     {
+        public string Path = null;
         public simpleTextEditor()
         {
             InitializeComponent();
@@ -28,13 +29,18 @@ namespace simpleTextEditor2._0
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             ofd.ShowDialog();
-            string Path = ofd.FileName;
-            mainTextBox.Text = File.ReadAllText(Path, Encoding.UTF8);
+            Path = ofd.FileName;
+            mainTextBox.Text = File.ReadAllText(Path, Encoding.GetEncoding(28591));
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText(Path, mainTextBox.Text);
         }
     }
 }
