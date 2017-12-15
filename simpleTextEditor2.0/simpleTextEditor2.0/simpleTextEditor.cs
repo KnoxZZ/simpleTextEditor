@@ -10,16 +10,6 @@ namespace simpleTextEditor2._0
         private string Path = null;
         sure op = new sure();
 
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        {
-            if (keyData == (Keys.Control | Keys.S))
-            {
-                save();
-                return true;
-            }
-            return base.ProcessCmdKey(ref msg, keyData);
-        }
-
         public simpleTextEditor()
         {
             InitializeComponent();
@@ -65,6 +55,18 @@ namespace simpleTextEditor2._0
             }
         }
 
+        private void open()
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            DialogResult dr = ofd.ShowDialog();
+            Path = ofd.FileName;
+            if (dr == DialogResult.OK)
+            {
+                mainTextBox.Text = File.ReadAllText(Path, Encoding.Default);
+            }
+        }
+
         private void simpleTextEditor_Load(object sender, EventArgs e)
         {
 
@@ -77,19 +79,12 @@ namespace simpleTextEditor2._0
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-            DialogResult dr = ofd.ShowDialog();
-            Path = ofd.FileName;
-            if (dr == DialogResult.OK)
-            {
-                mainTextBox.Text = File.ReadAllText(Path, Encoding.Default);
-            }
+            open();
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -109,6 +104,21 @@ namespace simpleTextEditor2._0
         {
             Path = null;
             save();
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.S))
+            {
+                save();
+                return true;
+            }
+            else if (keyData == (Keys.Control | Keys.O))
+            {
+                open();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }

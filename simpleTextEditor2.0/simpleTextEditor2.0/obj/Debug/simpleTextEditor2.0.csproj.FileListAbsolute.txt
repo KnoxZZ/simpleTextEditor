@@ -29,3 +29,4 @@ D:\Projektit\GitHub\simpleTextEditor\simpleTextEditor2.0\simpleTextEditor2.0\obj
 D:\Projektit\GitHub\simpleTextEditor\simpleTextEditor2.0\simpleTextEditor2.0\obj\Debug\simpleTextEditor2.0.exe
 D:\Projektit\GitHub\simpleTextEditor\simpleTextEditor2.0\simpleTextEditor2.0\obj\Debug\simpleTextEditor2.0.pdb
 C:\Users\Kalle\Hienoi asioi\simpleTextEditor\simpleTextEditor2.0\simpleTextEditor2.0\obj\Debug\simpleTextEditor2._0.sure.resources
+D:\Projektit\GitHub\simpleTextEditor\simpleTextEditor2.0\simpleTextEditor2.0\obj\Debug\simpleTextEditor2._0.sure.resources
