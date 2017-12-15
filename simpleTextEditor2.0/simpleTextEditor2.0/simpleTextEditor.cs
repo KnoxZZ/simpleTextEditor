@@ -9,6 +9,17 @@ namespace simpleTextEditor2._0
     {
         private string Path = null;
         sure op = new sure();
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.S))
+            {
+                save();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
         public simpleTextEditor()
         {
             InitializeComponent();
