@@ -7,11 +7,39 @@ namespace simpleTextEditor2._0
 {
     public partial class simpleTextEditor : Form
     {
-        public string Path = null;
+        private string Path = null;
         public simpleTextEditor()
         {
             InitializeComponent();
             
+        }
+        private void save()
+        {
+            if(Path == null)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                Path = sfd.FileName;
+                File.WriteAllText(Path, mainTextBox.Text, Encoding.UTF8);
+            }
+            else
+            {
+                File.WriteAllText(Path, mainTextBox.Text);
+            }
+        }
+
+        private Boolean exit()
+        {
+            if (!(mainTextBox.Text == File.ReadAllText(Path)))
+            {
+                sure op = new sure();
+                op.Show();
+
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         private void simpleTextEditor_Load(object sender, EventArgs e)
@@ -30,7 +58,7 @@ namespace simpleTextEditor2._0
             ofd.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             ofd.ShowDialog();
             Path = ofd.FileName;
-            mainTextBox.Text = File.ReadAllText(Path, Encoding.GetEncoding(28591));
+            mainTextBox.Text = File.ReadAllText(Path, Encoding.UTF8);
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -40,7 +68,21 @@ namespace simpleTextEditor2._0
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            File.WriteAllText(Path, mainTextBox.Text);
+            save();
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(exit())
+            {
+                mainTextBox.Text = null;
+            }
+        }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Path = null;
+            save();
         }
     }
 }
