@@ -167,12 +167,13 @@ namespace simpleTextEditor2._0
         
         private void redoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*
             if(mainTextBox.CanRedo == true)
             {
-                mainTextBox.Redo();
+                if(mainTextBox.RedoActionName != "Delete")
+                {
+                    mainTextBox.Redo();
+                }
             }
-            */
         }
 
     }
